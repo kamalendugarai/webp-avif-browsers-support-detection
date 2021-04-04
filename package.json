@@ -1,0 +1,28 @@
+{
+  "name": "webp-avif-browsers-support-detection",
+  "version": "1.0.0",
+  "description": "This package will check browser support for webp and avif image type and will add class avif, webp or no-avif, no-webp accordingly to html element.",
+  "main": "dist/index.js",
+  "scripts": {
+    "minme": "terser ./src/index.js -c -m -o ./dist/index.js"
+  },
+  "keywords": [
+    "webp",
+    "avif",
+    "support",
+    "browser"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/kamalendugarai/glacio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kamalendugarai/glacier/issues"
+  },
+  "homepage": "https://github.com/kamalendugarai/glacier#readme",
+  "author": "Kamalendu Garai",
+  "license": "ISC",
+  "devDependencies": {
+    "terser": "^5.6.1"
+  }
+}
