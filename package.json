@@ -14,12 +14,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/kamalendugarai/glacio.git"
+    "url": "git+ssh://git@github.com:kamalendugarai/webp-avif-browsers-support-detection.git"
   },
   "bugs": {
-    "url": "https://github.com/kamalendugarai/glacier/issues"
+    "url": "https://github.com/kamalendugarai/webp-avif-browsers-support-detection/issues"
   },
-  "homepage": "https://github.com/kamalendugarai/glacier#readme",
+  "homepage": "https://github.com/kamalendugarai/webp-avif-browsers-support-detection#readme",
   "author": "Kamalendu Garai",
   "license": "ISC",
   "devDependencies": {
