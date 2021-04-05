@@ -19,6 +19,20 @@ detect();
 
 ```
 
+Using these class names you can load background images conditionally. We will try to load .avif image first as this is the most advanced image type available so far (Highest compression). Webp will come next and if there is no support for those then we will load jpeg or png image.
+
+```sh
+.avif.webp .anyClassName, .avif.no-webp .anyClassName{
+    background:url(imageName.avif);
+}
+.no-avif.webp .anyClassName{
+    background:url(imageName.webp)
+}
+.no-avif.no-webp .anyClassName{
+    background:url(imageName.jpg/.png)
+}
+```
+
 Though the name of this project is quite hard coupled to webp and avif, you can extend the capability to check browser support for any new nextgen (or existing) image type you may come across like the code sample given below. You need to pass one object having key type and url, type is the image type and url is the base64 converted image. For the example, if you want to check the support for jpg image you need to pass {type:"jpg",url:"Must be base64 coded small image for jpeg image"}
 
 ```sh
