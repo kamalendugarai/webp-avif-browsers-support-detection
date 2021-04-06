@@ -1,6 +1,6 @@
 # webp-avif-browsers-support-detection
 
-This is a utility to check if the browser does support for webp and avif next generation image types. It will add classes to the (ex. &lt;html class="webp no-avif"&gt;) tag. If the browser does support for that particular image type then it will add that image type as class name (ex.webp) or if doesn't support then it will add "no-" prefix to that image type as class (ex.no-webp).
+This is a utility to check if the browser does support for webp and avif next generation image types. It will add classes to the (ex. &lt;html class="webp no-avif"&gt;) tag. If the browser does support for that particular image type then it will add that image type as class name (ex.webp) or if doesn't support then it will add "no-" prefix to that image type as class (ex.no-webp). **Additionally, you can get browser support details within your js file**.
 
 Next generation image types are very good in compression. So, you should start using these.
 
@@ -15,7 +15,10 @@ After installation you need to import this module to your js file.
 ```sh
 import detect from 'webp-avif-browsers-support-detection';
 
-detect();
+let supportDetails = detect();
+
+// will print the detils (ex. {avif:true, webp:false})
+console.log(supportDetails);
 
 ```
 
