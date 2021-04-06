@@ -15,10 +15,10 @@ After installation you need to import this module to your js file.
 ```sh
 import detect from 'webp-avif-browsers-support-detection';
 
-let supportDetails = detect();
-
+detect().then(function (resp) {
 // will print the detils (ex. {avif:true, webp:false})
-console.log(supportDetails);
+  console.log(resp);
+});
 
 ```
 
