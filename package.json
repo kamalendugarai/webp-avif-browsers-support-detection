@@ -1,6 +1,6 @@
 {
   "name": "webp-avif-browsers-support-detection",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "This package will check browser support for webp and avif image type and will add class avif, webp or no-avif, no-webp accordingly to html element.",
   "main": "dist/index.js",
   "scripts": {
