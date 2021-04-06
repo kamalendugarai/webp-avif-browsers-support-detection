@@ -12,6 +12,7 @@ const detect = function (im = []) {
     },
   ].concat(im);
   var supportDetails = {};
+  var pmsd = new Promise();
   var $html = document.getElementsByTagName("html")[0];
   var defineImage = function (obj) {
     let img = new Image();
@@ -23,6 +24,7 @@ const detect = function (im = []) {
           : []
       );
       supportDetails[obj.type.toLowerCase()] = false;
+      pmsd.resolve(supportDetails);
       classes.add("no-" + obj.type.toLowerCase());
       $html.setAttribute("class", [...classes].join(" "));
       console.log(
@@ -37,6 +39,7 @@ const detect = function (im = []) {
           : []
       );
       supportDetails[obj.type.toLowerCase()] = true;
+      pmsd.resolve(supportDetails);
       classes.add(obj.type.toLowerCase());
       $html.setAttribute("class", [...classes].join(" "));
       console.log(obj.type.toUpperCase() + " supported in this browser");
@@ -45,6 +48,6 @@ const detect = function (im = []) {
   images.map((elm, i) => {
     defineImage(elm);
   });
-  return supportDetails;
+  return pmsd;
 };
 export default detect;
